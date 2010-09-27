@@ -13,10 +13,12 @@
 # Notes
 # $$ = Process.pid
 
+require 'system_timer'
+
 module Forker
   module CLI
     # You can use this if your daemon is simple enough or write your own and
-    # use Forker#fork directly
+    # use Forker#fork! directly
     def self.run(argv)
       require 'optparse'
       options = {}
@@ -40,7 +42,7 @@ module Forker
 
       case argv.first
       when "start"
-        Forker.fork(options)
+        Forker.fork!(options)
       when "stop"
         Forker.kill(options)
         exit
@@ -51,7 +53,7 @@ module Forker
     end
   end
 
-  def self.fork(opts={})
+  def self.fork!(opts={})
     opts = { :log => "/dev/null", :pid => "/var/run/#{File.basename($0)}.pid" }.merge(opts)
 
     $stdout.sync = $stderr.sync = true

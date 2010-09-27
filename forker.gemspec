@@ -8,4 +8,5 @@ Gem::Specification.new do |s|
   s.description = "Fork your ruby code with confidence"
   s.authors     = ["Ben Marini"]
   s.files       = Dir.glob("lib/**/*") + %w(README.md)
+  s.add_dependency "SystemTimer", "~> 1.2"
 end
