@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = "forker"
-  s.version     = "1.0.0"
+  s.version     = "1.0.1"
   s.date        = "2010-09-27"
   s.summary     = "Fork your ruby code with confidence"
   s.email       = "bmarini@gmail.com"
