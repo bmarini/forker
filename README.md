@@ -29,9 +29,6 @@
 
     #!/usr/bin/env ruby
 
-    # Default to production, this script can't be passed env vars on the prod servers
-    ENV['RAILS_ENV'] ||= 'production'
-
     # Simulate calling rake environment
     $rails_rake_task = true
 
