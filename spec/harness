@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+require 'rubygems'
+require 'bundler/setup'
+require 'forker'
+
+Forker::CLI.run(ARGV)
+loop do
+  puts "I love tests"
+  sleep 0.1
+end

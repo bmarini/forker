@@ -13,6 +13,7 @@
 # Notes
 # $$ = Process.pid
 
+require 'thread'
 require 'system_timer'
 
 module Forker
