@@ -1,3 +1,5 @@
+[![Build Status](http://travis-ci.org/bmarini/forker.png)](http://travis-ci.org/bmarini/forker)
+
 # Goals
 
 * Simplest code possible to daemonize code, redirect output and manage the
