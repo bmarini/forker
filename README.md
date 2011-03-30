@@ -8,7 +8,7 @@
 ## Usage
 
     require 'forker'
-    Forker.fork(
+    Forker.fork!(
       :log   => "/dev/null",                         # Default value
       :pid   => "/var/run/#{File.basename($0)}.pid", # Default value
       :chdir => false,                               # Default value
