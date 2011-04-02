@@ -14,7 +14,13 @@
 # $$ = Process.pid
 
 require 'thread'
-require 'system_timer'
+
+if RUBY_VERSION < '1.9'
+  require 'system_timer'
+  module Forker; Timeout = SystemTimer; end
+else
+  require 'timeout'
+end
 
 module Forker
   module CLI
@@ -100,7 +106,7 @@ module Forker
       Process.kill("TERM", pid)
 
       begin
-        SystemTimer.timeout(sec) do
+        Timeout.timeout(sec) do
           loop do
             puts "waiting #{sec} seconds for #{pid} before sending KILL"
             Process.kill(0, pid) # See if proc exists

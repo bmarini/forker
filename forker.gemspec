@@ -12,6 +12,6 @@ Gem::Specification.new do |s|
   s.description = "Fork your ruby code with confidence"
   s.authors     = ["Ben Marini"]
   s.files       = Dir.glob("lib/**/*") + %w(README.md)
-  s.add_dependency "SystemTimer", "~> 1.2"
+  s.add_dependency "SystemTimer", "~> 1.2" if RUBY_VERSION < "1.9"
   s.add_development_dependency "minitest", "~> 2.0.2"
 end
