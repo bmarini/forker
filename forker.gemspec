@@ -11,7 +11,8 @@ Gem::Specification.new do |s|
   s.homepage    = "http://github.com/bmarini/forker"
   s.description = "Fork your ruby code with confidence"
   s.authors     = ["Ben Marini"]
-  s.files       = Dir.glob("lib/**/*") + %w(README.md)
+  s.files       = Dir.glob("lib/**/*") + %w(forker.gemspec Gemfile Rakefile README.md)
+  s.test_files  = Dir.glob("spec/*")
   s.add_dependency "SystemTimer", "~> 1.2" if RUBY_VERSION < "1.9"
   s.add_development_dependency "minitest", "~> 2.0.2"
 end
